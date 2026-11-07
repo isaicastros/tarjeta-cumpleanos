@@ -1,0 +1,66 @@
+# TARJETA DIGITAL DE CUMPLEAÑOS — GUÍA RÁPIDA
+
+## 1. Probar en Windows
+1. Extrae `tarjeta_cumpleanos.zip`.
+2. Abre la carpeta `tarjeta_cumpleanos`.
+3. Haz doble clic en `index.html` (preferiblemente Chrome o Edge).
+4. Pulsa el sobre y luego SÍ. La música empieza tras esa interacción.
+5. Si no has agregado fotografías, verás una pantalla de reemplazo. Es normal.
+
+## 2. Personalizar el contenido
+Abre `script.js` con Bloc de notas o Visual Studio Code.
+Al inicio encontrarás `const CONFIG = { ... }`.
+Cambia:
+- `recipient`: nombre o dedicatoria para quien cumple años.
+- `sender`: firma de quien envía la tarjeta.
+- `question`: pregunta de la pantalla SÍ/NO.
+- `openingMessage`: mensaje al comenzar la sorpresa.
+- `finalMessage`: dedicatoria final.
+- `photoCaptions`: textos que acompañan cada foto.
+- `progressiveMessages`: frases que aparecen progresivamente.
+
+Guarda el archivo y actualiza la página en el navegador (Ctrl + F5).
+
+## 3. Agregar fotografías
+Copia tus imágenes a la carpeta `fotos` y nómbralas exactamente:
+- foto1.jpg
+- foto2.jpg
+- foto3.jpg
+- foto4.jpg
+
+Puedes usar JPG, PNG o WEBP, pero si cambias la extensión debes actualizar las rutas en `CONFIG.photos` de `script.js`.
+Recomendación: imágenes verticales o cuadradas, optimizadas para web (idealmente menos de 1.5 MB cada una). Usa fotos que tengas permiso para compartir.
+
+## 4. Música
+La tarjeta incluye música ambiental instrumental original generada con Web Audio API al pulsar SÍ. No requiere descargar un MP3.
+Si prefieres un archivo propio o con licencia:
+1. Copia un MP3 a `musica`, por ejemplo `mi-cancion.mp3`.
+2. En `script.js`, cambia `audioFile: ""` por `audioFile: "musica/mi-cancion.mp3"`.
+La música no se reproduce antes de la interacción porque los navegadores móviles bloquean normalmente el autoplay.
+
+## 5. Publicar gratis con GitHub Pages
+1. Crea/inicia sesión en https://github.com
+2. Pulsa New repository.
+3. Nombre sugerido: `tarjeta-cumpleanos`. Puedes marcarlo Public.
+4. En el repositorio, pulsa Add file > Upload files.
+5. Sube el contenido de la carpeta (index.html, style.css, script.js y las carpetas fotos y musica). No subas el ZIP como único archivo.
+6. Pulsa Commit changes.
+7. Ve a Settings > Pages.
+8. En Build and deployment, selecciona Deploy from a branch.
+9. Branch: `main`; carpeta: `/ (root)`; pulsa Save.
+10. Espera a que GitHub publique. El enlace será parecido a:
+   https://TU-USUARIO.github.io/tarjeta-cumpleanos/
+
+La primera publicación puede tardar unos minutos. Si actualizas fotos o textos, vuelve a subir los archivos modificados y espera a que se publique el cambio.
+
+## 6. Enviar por WhatsApp
+Copia el enlace publicado y envíalo como mensaje. Ejemplo:
+"Preparé algo especial para ti 🎁❤️. Ábrelo cuando tengas un momento:
+[PEGA AQUÍ TU ENLACE]"
+
+## 7. Notas importantes
+- GitHub Pages publica el contenido de forma pública. No incluyas datos privados ni fotos que no quieras hacer accesibles a cualquiera que tenga el enlace.
+- WhatsApp mostrará una vista previa básica; el sobre aparece al abrir el enlace en el navegador.
+- Prueba el enlace desde otro celular antes de enviarlo.
+- La música y las fuentes tipográficas externas pueden depender de conexión a internet.
+- El botón NO se mueve para crear un efecto juguetón; en pantallas táctiles se mueve al tocarlo.

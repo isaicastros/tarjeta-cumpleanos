@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="Una sorpresa especial preparada para ti.">
+  <title>Una sorpresa especial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div id="particles" aria-hidden="true"></div>
+
+  <main>
+    <section id="intro" class="screen intro-screen">
+      <div class="eyebrow"><span></span> UNA EXPERIENCIA PREPARADA PARA TI <span></span></div>
+      <p class="intro-kicker">Hay momentos que merecen algo especial...</p>
+      <h1>Una pequeña<br><em>gran sorpresa</em></h1>
+      <p class="intro-copy">Te preparé algo con mucho cariño.<br>¿Te gustaría descubrirlo?</p>
+
+      <button id="openEnvelope" class="envelope-button" aria-label="Abrir el sobre">
+        <span class="envelope-glow"></span>
+        <span class="envelope">
+          <span class="letter"><span>PARA TI</span><b>♥</b></span>
+          <span class="envelope-back"></span>
+          <span class="envelope-front"></span>
+          <span class="envelope-flap"></span>
+          <span class="seal">♥</span>
+        </span>
+        <span class="tap-hint">TOCA EL SOBRE PARA ABRIR</span>
+      </button>
+      <p class="tiny-note">Con cariño, para alguien muy especial.</p>
+    </section>
+
+    <section id="question" class="screen question-screen hidden">
+      <div class="eyebrow"><span></span> UNA PREGUNTA IMPORTANTE <span></span></div>
+      <div class="question-mark">✦</div>
+      <p class="intro-kicker">Antes de continuar...</p>
+      <h2 id="questionText">¿Quieres recibir tu sorpresa de cumpleaños?</h2>
+      <p class="intro-copy">Prometo que fue preparada pensando en ti.</p>
+      <div class="choice-area" id="choiceArea">
+        <button id="yesButton" class="btn btn-gold">¡SÍ, QUIERO! <span>♥</span></button>
+        <button id="noButton" class="btn btn-ghost">No 🙈</button>
+      </div>
+      <p class="tiny-note">Hay respuestas que hacen más bonita la historia.</p>
+    </section>
+
+    <section id="surprise" class="screen surprise-screen hidden">
+      <div class="film-label">UNA HISTORIA · UN DÍA ESPECIAL</div>
+      <p class="surprise-overline">Hoy celebramos...</p>
+      <h2 class="hero-title">¡Feliz<br><em>cumpleaños!</em></h2>
+      <p id="recipientLine" class="recipient-line">Para una persona maravillosa</p>
+      <div class="gold-line"></div>
+      <p id="storyMessage" class="story-message"></p>
+
+      <div class="slideshow-wrap">
+        <div class="slide-frame">
+          <img id="slideImage" src="fotos/foto1.jpg" alt="Recuerdo especial">
+          <div id="photoFallback" class="photo-fallback">
+            <span>✦</span>
+            <small>TU RECUERDO ESPECIAL</small>
+            <b>Agrega tus fotografías</b>
+            <small>fotos/foto1.jpg · foto2.jpg · foto3.jpg</small>
+          </div>
+          <div class="frame-vignette"></div>
+          <div class="slide-counter" id="slideCounter">01 / 04</div>
+        </div>
+        <p id="photoCaption" class="photo-caption">Los momentos más bonitos merecen recordarse.</p>
+        <div class="slide-controls">
+          <button id="prevSlide" class="round-control" aria-label="Fotografía anterior">‹</button>
+          <div id="slideDots" class="slide-dots"></div>
+          <button id="nextSlide" class="round-control" aria-label="Siguiente fotografía">›</button>
+        </div>
+      </div>
+
+      <div class="message-sequence">
+        <p class="sequence-label">UNAS PALABRAS PARA TI</p>
+        <p class="sequence-line" id="sequenceLine"></p>
+      </div>
+
+      <button id="finalButton" class="btn btn-gold final-button">DESCUBRIR MI MENSAJE FINAL <span>✦</span></button>
+    </section>
+
+    <section id="final" class="screen final-screen hidden">
+      <div class="final-star">✧</div>
+      <p class="eyebrow">EL MEJOR DESEO ES PARA TI</p>
+      <h2>Que la vida te<br><em>sorprenda bonito.</em></h2>
+      <div class="gold-line"></div>
+      <p id="finalMessage" class="final-message"></p>
+      <p id="signature" class="signature">Con mucho cariño ♥</p>
+      <button id="replayButton" class="btn btn-ghost replay-button">VOLVER A VER LA SORPRESA ↗</button>
+    </section>
+  </main>
+
+  <button id="musicButton" class="music-button hidden" aria-label="Pausar o reanudar música">
+    <span class="music-icon">♫</span><span id="musicLabel">MÚSICA ACTIVADA</span>
+    <span class="equalizer"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

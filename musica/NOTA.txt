@@ -1,0 +1,1 @@
+La tarjeta incluye música instrumental ambiental generada por JavaScript. Opcionalmente coloca aquí un MP3 propio/licenciado y configura audioFile en script.js.
